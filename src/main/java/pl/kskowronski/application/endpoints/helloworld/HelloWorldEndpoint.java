@@ -1,4 +1,4 @@
-package com.example.application.endpoints.helloworld;
+package pl.kskowronski.application.endpoints.helloworld;
 
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;

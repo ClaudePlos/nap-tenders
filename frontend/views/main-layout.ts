@@ -10,7 +10,7 @@ import '@vaadin/scroller';
 import '@vaadin/tabs';
 import '@vaadin/tabs/vaadin-tab';
 import '@vaadin/vaadin-lumo-styles/vaadin-iconset';
-import type User from 'Frontend/generated/com/example/application/data/entity/User';
+import type User from 'Frontend/generated/pl/kskowronski/application/data/entity/User';
 import { imageDataUrl } from 'Frontend/util';
 import { html, render } from 'lit';
 import { customElement } from 'lit/decorators.js';
@@ -90,6 +90,8 @@ export class MainLayout extends Layout {
     ];
   }
 
+  //img="${until(imageDataUrl(user.profilePicture))}"
+
   private createUserMenuItem(user: User) {
     const item = document.createElement('div');
     item.style.display = 'flex';
@@ -99,11 +101,10 @@ export class MainLayout extends Layout {
       html`
         <vaadin-avatar
           theme="xsmall"
-          img="${until(imageDataUrl(user.profilePicture))}"
-          name="${user.name}"
+          name="${user.username}"
           tabindex="-1"
         ></vaadin-avatar>
-        <span>${user.name}</span>
+        <span>${user.username}</span>
         <vaadin-icon icon="lumo:dropdown"></vaadin-icon>
       `,
       item

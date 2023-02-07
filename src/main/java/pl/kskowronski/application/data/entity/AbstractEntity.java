@@ -1,4 +1,4 @@
-package com.example.application.data.entity;
+package pl.kskowronski.application.data.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
